@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Result</title>
+    <style>
+        body {
+            background: url('https://source.unsplash.com/1600x900/?happiness,sadness') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+        }
+        h2 {
+            margin-top: 50px;
+            font-size: 32px;
+        }
+        .result-box {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            width: 50%;
+            margin: 20px auto;
+        }
+        .emotion {
+            font-size: 24px;
+            font-weight: bold;
+            color: yellow;
+        }
+        .back-button {
+            background: #ffcc00;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .back-button:hover {
+            background: #ffdd44;
+        }
+    </style>
+</head>
+<body>
+    <h2>Detected Emotion</h2>
+    <div class="result-box">
+        <p><strong>Input Text:</strong> "{{ text }}"</p>
+        <p class="emotion">Emotion: {{ emotion }}</p>
+        <a href="/" class="back-button">Analyze Another</a>
+    </div>
+</body>
+</html>

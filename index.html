@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Detector</title>
+    <style>
+        body {
+            background: url('https://source.unsplash.com/1600x900/?emotion,faces') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+        }
+        h2 {
+            margin-top: 50px;
+            font-size: 32px;
+        }
+        form {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            width: 50%;
+            margin: 20px auto;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+        }
+        input[type="submit"] {
+            background: #ffcc00;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background: #ffdd44;
+        }
+    </style>
+</head>
+<body>
+    <h2>Real-Time Text Emotion Detection</h2>
+    <form action="/analyze" method="post">
+        <label for="text">Enter a Sentence:</label><br>
+        <input type="text" id="text" name="text" required><br><br>
+        <input type="submit" value="Analyze Emotion">
+    </form>
+</body>
+</html>
